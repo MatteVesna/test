@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #333 0%, #000 80%);
+    animation: bg-shift 10s ease infinite alternate;
+    color: #eee;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    animation: fade-in-up 0.8s ease;
+}
+
+h1, h2 {
+    color: #ff6600;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ccc;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+}
+
+.button, button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .button:hover {
+    background-color: #ff8500;
+    transform: scale(1.05);
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease;
+}
+
+@keyframes bg-shift {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 100%; }
+}
